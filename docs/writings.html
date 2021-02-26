@@ -1,0 +1,56 @@
+---
+---
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style type="text/css">
+		@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Source+Code+Pro&display=swap');
+		* {
+	    	background-color: #F2F2F2;
+		}
+		header {
+			font-family: 'Source Code Pro', monospace;
+			margin: auto;
+			padding-top: 3%;
+			width: 80%;
+			text-align: center;
+		}
+		.title {
+			padding-top: 1%;
+		}
+		.container {
+			max-width: 700px;
+			padding-top: 1%;
+			margin: auto;
+		}
+		a {
+			color: red;
+			text-decoration: none;
+			transition: all .35s ease 0s;
+		}
+		a:hover {
+			color: #84CFFF;
+		}
+		a, p {
+			font-family: 'Montserrat', sans-serif;
+		}
+		li {
+			list-style-type: none;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<a href="/">&laquo back</a>
+		<h1 class="title">writings</h1>
+	</header>
+	<main>
+		<div class="container">
+			{% for post in site.posts %}
+				<li>
+					<a href="{{ post.url }}">{{ post.title }} - {{ post.date | date: "%a, %D"}}</a>
+				</li>
+			{% endfor %}
+		</div>
+	</main>
+</body>

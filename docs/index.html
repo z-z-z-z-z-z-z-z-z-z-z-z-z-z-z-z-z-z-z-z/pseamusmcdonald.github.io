@@ -1,53 +1,66 @@
 ---
 ---
 
-<style type="text/css">
-	@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Source+Code+Pro&display=swap');
 
-	* {
-		background-color: #F2F2F2;
-	}
-	.name{
-		font-size: 25px;
-		color: red;
-	}
-	a {
-		color: red;
-		text-decoration: none;
-		transition: all .35s ease 0s;
-	}
-	body {
-		min-height: 100%;
-		width: 100%;
-		margin: 0px;
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style type="text/css">
+		@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Source+Code+Pro&display=swap');
 
-		display: flex;
-		flex-direction: column;
-	}
-	header {
-		font-family: 'Source Code Pro', monospace;
-		padding: 15px 133px;
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-	}
-	.menu li {
-		display: inline-block;
-		padding: 0px 25px;
-	}
-	a:hover {
-		color: #84CFFF;
-	}
-	footer {
-		font-family: 'Montserrat', sans-serif;
-		font-size: .9rem;
-		height:60px;
-		width: 100%;
-		text-align: center;
-		margin-top: auto;
-	}
-</style>
+		* {
+			background-color: #F2F2F2;
+		}
+		.name{
+			font-size: 25px;
+			color: red;
+		}
+		a {
+			color: red;
+			text-decoration: none;
+			transition: all .35s ease 0s;
+		}
+		body {
+			min-height: 100%;
+			width: 100%;
+			margin: 0px;
 
+			display: flex;
+			flex-direction: column;
+		}
+		header {
+			font-family: 'Source Code Pro', monospace;
+			padding: 15px 133px;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+		main {
+			margin: auto;
+			text-align: center;
+		}
+		.menu li {
+			display: inline-block;
+			padding: 0px 25px;
+		}
+		a:hover {
+			color: #84CFFF;
+		}
+		footer {
+			font-size: .8rem;
+			height:50px;
+			width: 100%;
+			text-align: center;
+			margin-top: auto;
+		}
+		p {
+			font-family: 'Montserrat', sans-serif;
+		}
+		.mainImg {
+			border: #f1f1f1;
+			border-width: thin thick; 
+		}
+	</style>
+</head>
 <body>
 	<header>
 		<h3 class="name"><a href="mailto:pseamusmcd@gmail.com">Seamus McDonald</a></h3>
@@ -55,11 +68,13 @@
 			<ul>
 				<li><a href="https://github.com/pseamusmcdonald" target="_blank" rel="noopener noreferrer">projects</a></li>
 				<li><a href="/writings.html">writings</a></li>
+				<li><a href="/about.html">about</a></li>
 			</ul>
 		</nav>
 	</header>
 	<main>
-		<h3></h3>
+		<img src="./data/IMG_0088.jpg" alt="Sailing off Santa Cruz Island." height="600" class="mainImg"></img>
+		<p>Sailing through Santa Barbara Channel during sunrise.</p>
 	</main>
 	<footer>
 	<p>Copyright &copy <script type="text/javascript">document.write(new Date().getFullYear());</script> Seamus McDonald</p>
