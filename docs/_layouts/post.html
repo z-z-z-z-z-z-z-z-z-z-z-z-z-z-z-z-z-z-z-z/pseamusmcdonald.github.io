@@ -1,0 +1,56 @@
+---
+---
+
+<style type="text/css">
+	@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Source+Code+Pro&display=swap');
+
+	.container {
+		max-width: 1000px;
+		margin: auto;
+	}
+
+	h1, h2, h3, h4, h5, h6 {
+		font-family: 'Source Code Pro', monospace;
+	}
+	a, p, ul li, ol li {
+		font-family: 'Montserrat', sans-serif;
+		font-size: 1.1rem;
+	}
+	a {
+		color: red;
+	}
+
+	header {
+		margin-top: 40px;
+		margin-bottom: 20px;
+	}
+	main {
+		float: left;
+		width: 65%;
+		min-height: 300px;
+	}
+	aside {
+		float: right;
+		width: 25%;
+		min-height: 300px;
+	}
+</style>
+
+<div class="container">
+	<header>
+		<a href="/index.html">&laquo back</a>
+	</header>
+	<main>
+		<h2>{{ page.title }}</h2>
+		<h4>{{ page.date | date: "%a, %D"}}</h4>
+		{{content}}
+	</main>
+	<aside>
+		<h3>Recent Posts</h3>
+		{% for post in site.posts %}
+			<li>
+				<a href="{{ post.url }}">{{ post.title }}</a>
+			</li>
+		{% endfor %}
+	</aside>
+</div>
