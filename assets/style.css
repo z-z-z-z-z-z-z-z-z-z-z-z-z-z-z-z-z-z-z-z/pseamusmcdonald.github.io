@@ -208,3 +208,13 @@ footer {
     justify-content: space-between;
     padding: 2rem 0;
 }
+
+
+.scrollReveal {
+    opacity: 0;
+    transition: all 1s ease-in-out;
+}
+
+.display {
+    opacity: 1 !important;
+}
