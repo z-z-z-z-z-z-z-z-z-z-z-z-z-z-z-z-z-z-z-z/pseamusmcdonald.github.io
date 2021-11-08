@@ -1,0 +1,209 @@
+@font-face {
+    font-family: "Manrope";
+    src: url("./fonts/Manrope-Light.ttf") format("truetype");
+    font-weight: 300;
+    font-style: normal;
+}
+  
+@font-face {
+    font-family: "Manrope";
+    src: url("./fonts/Manrope-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+  
+@font-face {
+    font-family: "Manrope";
+    src: url("./fonts/Manrope-Bold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Manrope";
+    src: url("./fonts/Manrope-ExtraBold.ttf") format("truetype");
+    font-weight: 800;
+    font-style: normal;
+}
+
+* {
+    font-family: 'Manrope';
+}
+
+h2 {
+    font-weight: 800;
+    font-size: 4.5rem;
+    margin: 0;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+body {
+    margin: 0;
+}
+
+p {
+    letter-spacing: .75px;
+    line-height: 32px;
+}
+
+header {
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+}
+
+.headerWrapper {
+    width: 95%;
+    margin: auto;
+}
+
+.lightModeButtonsContainer {
+    width: max-content;
+    margin-left: auto;
+    margin-top: 1rem;
+}
+
+.lightModeButtonsContainer > button {
+    background: none;
+    border: 0px solid #1f1f1f00;
+    transition: all .5s ease-in-out;
+    width: 4rem;
+}
+
+.lightModeButtonsContainer > button:first-of-type {
+    margin-right: 1rem;
+}
+
+.lightModeButtonsContainer > button:last-of-type {
+    margin-left: 1rem;
+}
+
+.lightModeButtonsContainer > button:first-of-type:hover {
+    border: 1px solid #1f1f1f;
+    margin-right: 1rem;
+}
+
+.lightModeButtonsContainer > button:last-of-type:hover {
+    color: rgb(221, 221, 221);
+    background: #1f1f1f;
+    margin-left: 1rem;
+}
+
+.pageContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 11rem;
+    width: 90%;
+    margin: 0 auto 7rem;
+}
+
+.landingContainer {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.landingStatementContainer {
+    width: max-content;
+    margin: auto 0;
+    padding-bottom: 5rem;
+}
+
+.landingStatementContainer > h1 {
+    font-size: 6rem;
+    font-weight: 800;
+    margin: 0;
+}
+
+.landingStatementContainer > div {
+    font-size: 1.4rem;
+    font-weight: 300;
+    width: max-content;
+    margin: 0 0 0 auto;
+}
+
+
+.scrollDownContainer {
+    position: absolute;
+    display: flex;
+    width: max-content;
+    flex-direction: column;
+    align-items: center;
+    align-self: flex-end;
+    bottom: 20px;
+}
+
+#scrollDown {
+    padding: 0 4px 10px 0;
+}
+
+.aboutMeContainer {
+    display: flex;
+    align-items: center;
+    gap: 7rem;
+}
+
+#aboutMeImage {
+    border-radius: 50%;
+}
+
+.projectRowContainer {
+    position: relative;
+    border-top: 1px solid #1f1f1f;
+    border-bottom: 1px solid #1f1f1f;
+    padding: 2rem 0;
+}
+
+.projectRowContainer:first-of-type {
+    border-bottom: none;
+}
+
+.projectRowContainer:last-of-type {
+    border-top: none;
+}
+
+.projectRowContainer > div {
+    position: absolute;
+    bottom: 5px;
+    right: 20px;
+}
+
+.contactContainer {
+    max-width: 1400px;
+    margin: auto;
+}
+
+.contactTopContainer {
+    position: relative;
+}
+
+.contactArrowSvg {
+    position: absolute;
+    bottom: 10px;
+    left: 50px;
+}
+
+.contactInfoText {
+    margin: 1rem 0;
+}
+
+.contactIconsContainer {
+    display: flex;
+    gap: 2rem;
+}
+
+footer {
+    border-top: 1px solid #1f1f1f;
+}
+
+.footerContainer {
+    display: flex;
+    width: 95%;
+    margin: auto;
+    justify-content: space-between;
+    padding: 2rem 0;
+}
