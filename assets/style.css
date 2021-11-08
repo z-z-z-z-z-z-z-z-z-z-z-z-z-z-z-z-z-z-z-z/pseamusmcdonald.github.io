@@ -71,6 +71,7 @@ header {
     border: 0px solid #1f1f1f00;
     transition: all .5s ease-in-out;
     width: 4rem;
+    height: 2rem;
 }
 
 .lightModeButtonsContainer > button:first-of-type {
@@ -95,7 +96,7 @@ header {
 .pageContainer {
     display: flex;
     flex-direction: column;
-    gap: 11rem;
+    gap: 30vh;
     width: 90%;
     margin: 0 auto 7rem;
 }
@@ -183,7 +184,7 @@ header {
 
 .contactArrowSvg {
     position: absolute;
-    bottom: 10px;
+    bottom: -5px;
     left: 50px;
 }
 
