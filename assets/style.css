@@ -243,7 +243,7 @@ footer {
 
 .scrollReveal {
     opacity: 0;
-    transition: all 1.3s cubic-bezier( 0.79, 0.33, 0.33, 0.83 ) ;
+    transition: all 1.1s ease-in-out;
 }
 
 .display {
