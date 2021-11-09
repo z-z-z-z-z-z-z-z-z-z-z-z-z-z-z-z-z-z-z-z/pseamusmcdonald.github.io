@@ -1,23 +1,21 @@
-/* Animations */
+/* HTML Elements */
 
-var scrollRevealElements = document.querySelectorAll('.scrollReveal');
-var scrollDown = document.querySelector('#scrollDown');
-var arrowSvg = document.querySelector('#contactArrowHeadPath');
-var arrowHeadPath = document.querySelector('#contactArrowHead > path');
+let scrollRevealElements = document.querySelectorAll('.scrollReveal');
+let scrollDown = document.querySelector('#scrollDown');
+let arrowSvg = document.querySelector('#contactArrowHeadPath');
+let arrowHeadPath = document.querySelector('#contactArrowHead > path');
+let themeButtons = document.querySelectorAll('.lightModeButton');
 
-var themeButtons = document.querySelectorAll('.lightModeButton');
+/* Variables */
 
 const defaultTheme = "dark";
-let currentTheme;
 const scrollOffset = (window.innerHeight) * (.10);
-var arrowPlayed = false;
+let currentTheme;
+let arrowPlayed = false;
 
-const isInView = (element) => {
-    elementDistance = element.getBoundingClientRect().top;
-    return elementDistance <= (window.innerHeight - scrollOffset);
-}
+/* AnimeJS Animation Objects */
 
-var scrollHoverHop = anime({
+let scrollHoverHop = anime({
     targets: scrollDown,
     translateY: -15,
     direction: 'alternate',
@@ -25,7 +23,7 @@ var scrollHoverHop = anime({
     loop: true,
 });
 
-var arrowHeadDraw = anime({
+let arrowHeadDraw = anime({
     targets: arrowHeadPath,
     strokeDashoffset: [anime.setDashoffset, 0],
     easing: 'easeInOutSine',
@@ -35,7 +33,7 @@ var arrowHeadDraw = anime({
     direction: 'alternate',
 });
 
-var arrowDrawPath = anime({
+let arrowDrawPath = anime({
     targets: arrowSvg,
     strokeDashoffset: [anime.setDashoffset, 0],
     easing: 'easeInOutSine',
@@ -47,6 +45,13 @@ var arrowDrawPath = anime({
         anim.complete ? arrowHeadDraw.play() : null
     }
 });
+
+/* Animation Helper Functions */
+
+const isInView = (element) => {
+    elementDistance = element.getBoundingClientRect().top;
+    return elementDistance <= (window.innerHeight - scrollOffset);
+}
 
 const handleScrollReveal = () => {
 
@@ -68,7 +73,7 @@ const handleThemeModeOnLoad = () => {
 };
 
 const switchTheme = () => {
-    var currentTheme = document.documentElement.getAttribute("theme-mode");
+    let currentTheme = document.documentElement.getAttribute("theme-mode");
     return currentTheme === "dark" ? "light" : "dark"
 }
 
@@ -80,6 +85,8 @@ const handleThemeModeClick = (element) => {
     document.documentElement.setAttribute("theme-mode", switchTheme());
     console.log(document.documentElement.getAttribute("theme-mode"))
 };
+
+/* Window Event Handlers */
 
 window.onload = () => {
     handleScrollReveal();
