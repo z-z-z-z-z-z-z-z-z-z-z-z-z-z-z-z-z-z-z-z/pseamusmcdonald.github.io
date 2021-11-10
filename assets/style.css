@@ -270,6 +270,7 @@ footer {
     }
     .pageContainer {
         margin: 0 auto 3rem;
+        gap: 20vh;
     }
     .landingStatementContainer > h1 {
         font-size: 3em;
