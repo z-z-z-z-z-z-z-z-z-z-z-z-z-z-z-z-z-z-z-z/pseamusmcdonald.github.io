@@ -49,11 +49,13 @@ h2 {
 
 html {
     overflow-x: hidden;
+    height: 100%;
 }
 
 body {
     background: var(--background-color);
     margin: 0;
+    height: 100%;
 }
 
 p {
