@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <meta name="viewport" content="width=device-width">
+
         <link rel='stylesheet' href='./assets/style.css'/>
         <title>Seamus McDonald - Web Developer</title>
         <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
@@ -21,7 +23,7 @@
             <div class="pageContainer">
                 <div class="landingContainer">
                     <div class="landingStatementContainer">
-                        <h1 class="scrollReveal">Hi, I'm Seamus</h1>
+                        <h1 class="scrollReveal">Hi, <br />I'm Seamus</h1>
                         <div class="scrollReveal">a freelance developer</div>
                     </div>
                     <div class="scrollDownContainer scrollReveal">
@@ -37,7 +39,7 @@
                 <div class="aboutMeWrapper">
                     <div class="aboutMeContainer">
                         <div class="aboutMeImageWrapper">
-                            <img src='./assets/images/portrait.jpg' width=500 height=500 id="aboutMeImage"/>
+                            <img src='./assets/images/portrait.jpg' id="aboutMeImage"/>
                         </div>
                         <div class="aboutMeTextContainer">
                             <h2 class='scrollReveal'>About Me</h2>
@@ -79,10 +81,21 @@
                             </div>
                             <div class="contactArrowAnimationContainer">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="635" height="137" viewBox="0 0 635 137" class="contactArrowSvg" fill="none">
-                                    <path class="svgPath" id="contactArrowHeadPath" d="M633 82.9999C609 120.5 453.5 156.5 344.5 119C246.593 85.3164 186.755 -11.0816 102 3.49989C55.5 11.4999 2 51.0014 2 137" stroke="#202020" stroke-width="3"/>
+                                    <path class="svgPath" id="contactArrowPath" d="M633 82.9999C609 120.5 453.5 156.5 344.5 119C246.593 85.3164 186.755 -11.0816 102 3.49989C55.5 11.4999 2 51.0014 2 137" stroke="#202020" stroke-width="3"/>
                                 </svg>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="38" height="22" viewBox="0 0 38 22" fill="none" id="contactArrowHead">
                                     <path class="svgPath" d="M2 2L19 19L36 2" stroke="black" stroke-width="3"/>
+                                </svg>
+                            </div>
+                            <div class="contactArrowAnimationContainerMobile">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="290" height="325" viewBox="0 0 290 325" class="contactArrowSvg Mobile" fill="none">
+                                    <path class="svgPath" id="contactArrowPathMobile" d="M41.6708 1.5C-119.829 219.5 262.427 51 285.671 124C308.915 197 168 187.5 146 324.5" stroke="#202020" stroke-width="3"/>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="45" height="24" viewBox="0 -7.5 33 28" fill="none" id="contactArrowHead">
+                                    <path class="svgPath" d="M2 2L19 19L36 2" stroke="black" stroke-width="3" style="
+                                        transform: rotate(12deg);
+                                        transform-origin: center;
+                                    "></path>
                                 </svg>
                             </div>
                         </div>

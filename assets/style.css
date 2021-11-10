@@ -76,12 +76,15 @@ header {
     width: max-content;
     margin-left: auto;
     margin-top: 1rem;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;  
 }
 
 .lightModeButton {
     background: none;
     border: 0px solid #1f1f1f00;
-    transition: background .5s ease-in-out, color .51s ease-in-out;
     width: 4rem;
     height: 2rem;
 }
@@ -133,6 +136,10 @@ header {
     margin: 0;
 }
 
+.landingStatementContainer > h1 br {
+    display: none;
+}
+
 .landingStatementContainer > div {
     font-size: 1.4rem;
     font-weight: 300;
@@ -162,6 +169,9 @@ header {
 }
 
 #aboutMeImage {
+    display: block;
+    width: 500px;
+    height: 500px;
     border-radius: 50%;
 }
 
@@ -198,6 +208,10 @@ header {
     position: absolute;
     bottom: -15px;
     left: 80px;
+}
+
+.contactArrowAnimationContainerMobile {
+    display: none;
 }
 
 #contactArrowHead {
@@ -248,4 +262,62 @@ footer {
 
 .display {
     opacity: 1 !important;
+}
+
+@media screen and (max-width: 780px) {
+    h2 {
+        font-size: 2em;
+    }
+    .pageContainer {
+        margin: 0 auto 3rem;
+    }
+    .landingStatementContainer > h1 {
+        font-size: 3em;
+    }
+    .landingStatementContainer > h1 br {
+        display: unset;
+    }
+    .aboutMeContainer {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    #aboutMeImage {
+        width: 90%;
+        height: auto;
+        margin: auto;
+    }
+    .projectRowContainer {
+        overflow: hidden;
+    }
+    .projectRowContainer > h2 {
+        width: max-content;
+    }
+    .contactArrowAnimationContainer {
+        display: none;
+        visibility: none;
+    }
+    .contactArrowAnimationContainerMobile {
+        display: unset;
+    }
+    .contactArrowSvg.Mobile {
+        margin: auto;
+        display: block;
+    } 
+    #contactArrowHead {
+        left: 50%;
+        bottom: 0;
+        transform: translate(-50%, 0%);
+    }
+    .contactInfoText {
+        text-align: center;
+    }
+    .contactIconsContainer {
+        justify-content: center;
+    }
+    .footerContainer {
+        flex-direction: column-reverse;
+        gap: .5rem;
+        padding: 2rem 0;
+        align-items: center;
+    }
 }

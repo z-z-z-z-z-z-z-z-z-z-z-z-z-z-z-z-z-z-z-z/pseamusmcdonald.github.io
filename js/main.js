@@ -1,17 +1,18 @@
+/* Variables */
+
+const defaultTheme = "dark";
+const scrollOffset = (window.innerHeight) * (.09);
+let currentTheme;
+let arrowPlayed = false;
+
 /* HTML Elements */
 
 let scrollRevealElements = document.querySelectorAll('.scrollReveal');
 let scrollDown = document.querySelector('#scrollDown');
-let arrowSvg = document.querySelector('#contactArrowHeadPath');
-let arrowHeadPath = document.querySelector('#contactArrowHead > path');
+let arrowSvg = document.querySelector('#contactArrowPath');
+let arrowSvgMobile = document.querySelector('#contactArrowPathMobile')
+let arrowHeadPath = document.querySelectorAll('#contactArrowHead > path');
 let themeButtons = document.querySelectorAll('.lightModeButton');
-
-/* Variables */
-
-const defaultTheme = "dark";
-const scrollOffset = (window.innerHeight) * (.10);
-let currentTheme;
-let arrowPlayed = false;
 
 /* AnimeJS Animation Objects */
 
@@ -34,7 +35,7 @@ let arrowHeadDraw = anime({
 });
 
 let arrowDrawPath = anime({
-    targets: arrowSvg,
+    targets: [arrowSvg, arrowSvgMobile],
     strokeDashoffset: [anime.setDashoffset, 0],
     easing: 'easeInOutSine',
     duration: 1600,
@@ -50,6 +51,9 @@ let arrowDrawPath = anime({
 
 const isInView = (element) => {
     elementDistance = element.getBoundingClientRect().top;
+    if (elementDistance === 0) {
+        return false
+    }
     return elementDistance <= (window.innerHeight - scrollOffset);
 }
 
@@ -61,7 +65,7 @@ const handleScrollReveal = () => {
         }
     })
 
-    if(isInView(arrowSvg) && !arrowPlayed) {
+    if ((isInView(arrowSvg) || isInView(arrowSvgMobile)) && !arrowPlayed) {
         console.log(arrowHeadPath)
         arrowDrawPath.play();
         arrowPlayed = true;
@@ -96,4 +100,3 @@ window.onload = () => {
 window.addEventListener('scroll', () => {
     handleScrollReveal();
 })
-   
