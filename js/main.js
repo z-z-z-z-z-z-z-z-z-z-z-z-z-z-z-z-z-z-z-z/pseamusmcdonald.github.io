@@ -1,7 +1,7 @@
 /* Variables */
 
 const defaultTheme = "dark";
-const scrollOffset = (window.innerHeight) * (.09);
+const scrollOffset = (window.innerHeight) * (.08);
 let currentTheme;
 let arrowPlayed = false;
 
