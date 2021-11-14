@@ -38,6 +38,7 @@
 
 * {
     font-family: 'Manrope';
+    font-display: fallback;
     color: var(--color);
 }
 
