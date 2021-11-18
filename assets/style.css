@@ -327,20 +327,6 @@ footer {
     }
 }
 
-.initialScrollingText {
-	-moz-transform: translateX(0%);
-	-webkit-transform: translateX(0%);
-	transform: translateX(0%);
-	
-
-  }
-
-.activeScrollingText {
-	-moz-transform: translateX(100%);
-	-webkit-transform: translateX(100%);
-	transform: translateX(100%);
-
-}
   
   /* for Firefox */
 @-moz-keyframes initial-animation {

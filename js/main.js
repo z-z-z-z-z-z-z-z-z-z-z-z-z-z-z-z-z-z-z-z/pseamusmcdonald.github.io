@@ -94,14 +94,15 @@ const handleThemeModeClick = (element) => {
 
 const handleScrollingText = (textElement) => {
 	const textElementWidth = textElement.getBoundingClientRect().width;
-	if (textElementWidth > window.innerWidth - (window.innerWidth * .10)) {
-		textElement.classList.add("initialScrollingText");
+	if (textElementWidth > window.innerWidth - (window.innerWidth * .10) && (!textElement.classList.contains("activeScrollingText"))) {
 		textElement.style.animation  = `initial-animation ${textElementWidth/30}s linear 1s`
-	} else textElement.classList.remove("initialScrollingText");
-	textElement.onanimationend = () => {
-		textElement.classList.remove("initialScrollingAnimation")
-		textElement.classList.add("activeScrollingText");
-		textElement.style.animation  = `active-animation ${textElementWidth/30}s linear infinite`
+		textElement.onanimationend = () => {
+			textElement.style.animation  = `active-animation ${textElementWidth/30}s linear infinite`
+		}
+	} else {
+		textElement.onanimationend= () => {
+			textElement.style.animation  = ``
+		}
 	}
 }
 
@@ -110,11 +111,10 @@ const handleScrollingText = (textElement) => {
 window.onload = () => {
     handleScrollReveal();
     handleThemeModeOnLoad();
-	handleScrollingText();
 };
 
 window.onresize = () => {
-	handleScrollingText();
+	handleScrollReveal();
 }
 
 window.onscroll = () => {
