@@ -58,10 +58,12 @@ const isInView = (element) => {
 }
 
 const handleScrollReveal = () => {
-
-    scrollRevealElements.forEach((textElement) => {
-        if (isInView(textElement)) {
-            textElement.classList.add('display');
+    scrollRevealElements.forEach((hiddenElement) => {
+        if (isInView(hiddenElement)) {
+            hiddenElement.classList.add('display');
+			if (hiddenElement.classList.contains("scrollingText")) {
+				handleScrollingText(hiddenElement);
+			}
         }
     })
 
@@ -90,13 +92,31 @@ const handleThemeModeClick = (element) => {
     console.log(document.documentElement.getAttribute("theme-mode"))
 };
 
+const handleScrollingText = (textElement) => {
+	const textElementWidth = textElement.getBoundingClientRect().width;
+	if (textElementWidth > window.innerWidth - (window.innerWidth * .10)) {
+		textElement.classList.add("initialScrollingText");
+		textElement.style.animation  = `initial-animation ${textElementWidth/30}s linear 1s`
+	} else textElement.classList.remove("initialScrollingText");
+	textElement.onanimationend = () => {
+		textElement.classList.remove("initialScrollingAnimation")
+		textElement.classList.add("activeScrollingText");
+		textElement.style.animation  = `active-animation ${textElementWidth/30}s linear infinite`
+	}
+}
+
 /* Window Event Handlers */
 
 window.onload = () => {
     handleScrollReveal();
     handleThemeModeOnLoad();
+	handleScrollingText();
 };
 
-window.addEventListener('scroll', () => {
+window.onresize = () => {
+	handleScrollingText();
+}
+
+window.onscroll = () => {
     handleScrollReveal();
-})
+};
