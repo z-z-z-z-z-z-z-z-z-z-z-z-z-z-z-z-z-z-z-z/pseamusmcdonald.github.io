@@ -94,13 +94,14 @@ const handleThemeModeClick = (element) => {
 
 const handleScrollingText = (textElement) => {
 	const textElementWidth = textElement.getBoundingClientRect().width;
-	if (textElementWidth > window.innerWidth - (window.innerWidth * .10) && (!textElement.classList.contains("activeScrollingText"))) {
+	if (textElementWidth > window.innerWidth - (window.innerWidth * .10) && (textElement.getAttribute("data-scrolling") !== "true")) {
 		textElement.style.animation  = `initial-animation ${textElementWidth/30}s linear 1s`
 		textElement.onanimationend = () => {
 			textElement.style.animation  = `active-animation ${textElementWidth/30}s linear infinite`
+			textElement.setAttribute("data-scrolling", "true")
 		}
 	} else {
-		textElement.onanimationend= () => {
+		textElement.onanimationiteration = () => {
 			textElement.style.animation  = ``
 		}
 	}
