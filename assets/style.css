@@ -116,7 +116,7 @@ header {
     flex-direction: column;
     gap: 25vh;
     width: 90%;
-    margin: 0 auto 7rem;
+    margin: 0 auto 3rem;
     max-width: 1400px;
 }
 
@@ -256,7 +256,6 @@ footer {
     justify-content: space-between;
     padding: 3rem 0;
 }
-
 
 .scrollReveal {
     opacity: 0;
