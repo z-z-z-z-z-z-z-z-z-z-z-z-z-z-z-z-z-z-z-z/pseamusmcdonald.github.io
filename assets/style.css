@@ -90,6 +90,8 @@ header {
     border: 0px solid #1f1f1f00;
     width: 4rem;
     height: 2rem;
+		border-radius: 3px;
+		letter-spacing: .5px;
 }
 
 .lightModeButton:first-of-type {
@@ -106,7 +108,7 @@ header {
 }
 
 .lightModeButton:disabled {
-    border: 1px solid var(--color) !important;
+    outline: 1px solid var(--color) !important;
     background: transparent !important;
     color: var(--color) !important;
 }
