@@ -203,6 +203,7 @@ header {
 
 .contactContainer {
     margin: auto;
+    padding-bottom: 4rem; 
 }
 
 .contactTopContainer {
@@ -247,16 +248,11 @@ header {
     gap: 2rem;
 }
 
-footer {
-    border-top: 1px solid var(--color);
-}
-
 .footerContainer {
     display: flex;
-    width: 95%;
-    margin: auto;
     justify-content: space-between;
     padding: 3rem 0;
+    border-top: 1px solid var(--color);
 }
 
 .scrollReveal {
